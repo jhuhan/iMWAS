@@ -1,0 +1,13 @@
+#------input files:
+# 	cg13896476.gwas:	z-score from gwas
+# 	cg13896476.model:	weights for snps derived from elastic model
+# 	cg13896476.geno:	ancestry-matched genotype data (dosage format)
+# 	note:			all input files refer to the same allele for each snp			
+#
+#------output file:
+#	cg13896476.res:	iMWAS z-score and p-value
+
+# command for iMWAS
+Rscript iMWAS_run.R cg13896476.gwas cg13896476.model cg13896476.geno cg13896476.res
+
+# to derive snp weights, follow readme in ./model

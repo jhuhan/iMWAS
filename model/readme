@@ -1,0 +1,10 @@
+#------input files:
+# 	cg13896476.raw:	genotype data, dosage format(0,1,2)
+# 	cg13896476.pheno:	intermediate phenotype data, such as methylation level, expression level
+# 	important note:	genotype data must refer to the same allele as GWAS
+#
+#------output file:
+#	cg13896476.model:	snps and weights
+
+# command for computing weights
+Rscript model_run.R cg13896476.raw cg13896476.pheno cg13896476.model
